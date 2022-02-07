@@ -43,6 +43,12 @@ html {
   }
 }
 
+@media only screen and (min-device-width: 280px) and (max-device-width: 1080px) {
+  .app-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar {
   background-color: #111111;
   width: 0.2rem;
