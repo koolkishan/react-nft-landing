@@ -1,0 +1,112 @@
+.home {
+  margin-top: 6rem;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 32px;
+    .content {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+      .sub-title {
+        color: var(--pink);
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+      }
+      .title {
+        color: var(--accent-color1);
+      }
+      .description {
+        color: var(--accent-color3);
+      }
+      button {
+        color: var(--accent-color1);
+        background-color: var(--background);
+        font-weight: bold;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+        border: solid 3px transparent;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+          ),
+          linear-gradient(101deg, var(--pink), var(--orange));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        box-shadow: 2px 1000px 1px var(--background) inset;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+    .image-container {
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      .image {
+        img {
+        }
+      }
+      .ellipse-container {
+        .ellipse {
+          z-index: -1;
+          position: absolute;
+          height: 15rem;
+          width: 15rem;
+          filter: blur(100px);
+        }
+        .pink {
+          top: 40%;
+          right: 40%;
+          background-color: var(--pink);
+        }
+        .orange {
+          bottom: 40%;
+          left: 40%;
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+  .home {
+    padding: 1rem;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 1rem;
+    .container {
+      font-size: 16px;
+      grid-template-columns: 0.7fr;
+      .image-container {
+        position: absolute;
+        right: -10%;
+        top: 30%;
+        .image {
+          img {
+            height: 10rem;
+          }
+        }
+        .ellipse-container {
+          .ellipse {
+            height: 6rem;
+            width: 6rem;
+            filter: blur(30px);
+          }
+          .pink {
+            right: 10%;
+          }
+          .orange {
+            left: -5%;
+          }
+        }
+      }
+    }
+  }
+}

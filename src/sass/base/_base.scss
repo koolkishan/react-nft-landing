@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --orange: #ff8139;
+  --pink: #ff3998;
+  --green: #39ffa0;
+  --red: #ff3939;
+  --light-green: #edfff6;
+  --light-orange: #fff0e8;
+  --accent-color1: #ffffff;
+  --accent-color2: #555555;
+  --accent-color3: #cccccc;
+  --card-color: #000000;
+  --background: #111111;
+  --font-family: "Inter", sans-serif;
+}
+
+[data-theme="light"] {
+  --background: #ffffff;
+  --accent-color1: #000000;
+  --accent-color2: #eeeeee;
+  --accent-color3: #777777;
+  --card-color: #eeeeee;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app-container {
+  background-color: var(--background);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+  padding: 2rem 4rem;
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    padding: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: #111111;
+  width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+}
